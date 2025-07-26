@@ -70,6 +70,9 @@ The repository is organized into a clear and logical structure:
 └── requirements.txt
 
 6 directories, 21 files
+
+```
+
 ## 🛠️ Technologies Used
 
 * **Language:** Python 3.11.x
