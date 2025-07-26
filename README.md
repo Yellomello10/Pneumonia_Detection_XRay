@@ -40,38 +40,36 @@ Here's the cleaned-up version you should use to replace the current text in your
 
 The repository is organized into a clear and logical structure:
 
-```
-
-Pneumonia\_Detection\_XRay/
-├── data/                         \# Stores the raw and processed X-ray image dataset
-│   └── chest\_xray/               \# Extracted Kaggle dataset (train, val, test splits)
-├── notebooks/                    \# Jupyter Notebooks for step-by-step development & analysis
-│   ├── 1\_data\_exploration.ipynb  \# Initial EDA, data counts, visualizations
-│   ├── 2\_model\_training.ipynb    \# Model building, training (transfer learning, fine-tuning)
-│   └── 3\_model\_evaluation.ipynb  \# Model evaluation, metrics, plotting results
-├── src/                          \# Modular Python source code
-│   ├── **init**.py               \# Makes 'src' a Python package (corrected name)
-│   ├── data\_processing.py        \# Functions for data loading, augmentation, class weights
-│   ├── model.py                  \# Functions for building and compiling the DL model
-│   ├── prediction.py             \# Function for loading the trained model and making predictions
-│   └── utils.py                  \# (Optional) Utility functions, e.g., for plotting
-├── models/                       \# Stores trained model weights and training history
-│   ├── best\_model\_phase1.h5
-│   ├── final\_best\_model.h5
-│   └── training\_history.csv
-├── results/                      \# Stores evaluation plots and sample predictions
-│   ├── confusion\_matrix.png
-│   ├── roc\_curve.png
-│   ├── training\_history.png
-│   └── sample\_predictions.png
-├── app/                          \# Streamlit web application for live demonstration
+```bash
+.
+├── app
 │   └── app.py
-├── .gitignore                    \# Specifies files/folders to ignore in Git (e.g., data, large models)
-├── README.md                     \# This file
-└── requirements.txt              \# Lists all project dependencies
+├── data
+│   └── chest_xray
+├── models
+│   ├── best_model_phase1.h5
+│   ├── final_best_model.h5
+│   └── training_history.csv
+├── notebooks
+│   ├── 1_data_exploration.ipynb
+│   ├── 2_model_training.ipynb
+│   └── 3_model_evaluation.ipynb
+├── results
+│   ├── confusion_matrix.png
+│   ├── roc_curve.png
+│   ├── sample_predictions.png
+│   └── training_history.png
+├── src
+│   ├── __init__.py
+│   ├── data_processing.py
+│   ├── model.py
+│   ├── prediction.py
+│   └── utils.py
+├── .gitignore
+├── README.md
+└── requirements.txt
 
-
-````
+6 directories, 21 files
 ## 🛠️ Technologies Used
 
 * **Language:** Python 3.11.x
